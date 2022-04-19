@@ -1,0 +1,52 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  height: 600px;
+  width: 600px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  border: 1px solid rgb(172, 255, 255);
+}
+
+[data-cardNumber="card1"] {
+  background-color: rgb(255, 227, 232);
+}
+
+[data-cardNumber="card2"] {
+  background-color: rgb(255, 255, 99);
+}
+
+[data-cardNumber="card3"] {
+  background-color: rgb(255, 214, 137);
+}
+
+[data-cardNumber="card4"] {
+  background-color: rgb(255, 118, 118);
+}
+
+[data-cardNumber="card5"] {
+  background-color: rgb(255, 108, 243);
+}
+[data-cardNumber="card6"] {
+  background-color: rgb(58, 58, 202);
+}
+[data-cardNumber="card7"] {
+  background-color: rgb(135, 223, 135);
+}
+[data-cardNumber="card8"] {
+  background-color: rgb(107, 247, 247);
+}
+
+
+[data-hidden="true"]{
+	background:none;
+}
