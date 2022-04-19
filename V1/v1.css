@@ -6,15 +6,16 @@
 body {
   height: 100vh;
   display: flex;
-	flex-direction: column;
   justify-content: center;
   align-items: center;
 	background-color: #fff9de;
 }
 
-h1{
-	text-transform: uppercase;
-	color:darkslategrey;
+.game-container{
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-container {
@@ -26,6 +27,13 @@ h1{
   grid-template-columns: repeat(4, 1fr);
 }
 
+h1, p {
+	text-transform: uppercase;
+	color:darkslategrey;
+}
+
+
+/* Card Styles */
 .card {
   border:2px solid darkslategrey;
 }
@@ -35,35 +43,35 @@ h1{
 }
 
 [data-cardNumber="card1"] {
-  background-color: rgb(255, 227, 232);
+  background-color: #ffd4dc;
 }
 
 [data-cardNumber="card2"] {
-  background-color: rgb(255, 255, 99);
+  background-color: #fff6a9;
 }
 
 [data-cardNumber="card3"] {
-  background-color: rgb(255, 214, 137);
+  background-color: #ffd289;
 }
 
 [data-cardNumber="card4"] {
-  background-color: rgb(255, 118, 118);
+  background-color: #ff7d7d;
 }
 
 [data-cardNumber="card5"] {
-  background-color: rgb(255, 108, 243);
+  background-color: #ff87f5;
 }
 [data-cardNumber="card6"] {
-  background-color: rgb(58, 58, 202);
+  background-color: #6565f0;
 }
 [data-cardNumber="card7"] {
-  background-color: rgb(135, 223, 135);
+  background-color: #a9f2c1;
 }
 [data-cardNumber="card8"] {
-  background-color: rgb(107, 247, 247);
+  background-color: rgb(164, 255, 255);
 }
 
-
+/* Hide content by default */
 [data-hidden="true"]{
 	background:repeating-linear-gradient(transparent 0 20%,darkslategrey 0 30%)
 }
@@ -72,15 +80,34 @@ h1{
 	background:repeating-linear-gradient(transparent 0 20%,#ff6680 0 30%)
 }
 
+/* Reset Button */
 .reset-button{
 	padding:10px;
 	border:none;
 	margin:10px;
 	border-radius: 5px;
-	background-color:#ff6680;
+	background-color:darkslategray;
 	color:white;
+}
+.reset-button:active{
+	transform: scale(.95);
+	background-color: #ff6680;
 }
 .reset-button:hover{
 	transform: scale(.95);
-	background-color: darkslategray;
+	background-color: #ff6680;
+}
+
+
+/* Media Queries */
+@media screen and (max-width :850px) {
+	.game-container{
+		transform: scale(.8);
+	}	
+}
+
+@media screen and (max-width :500px) {
+	.game-container{
+		transform: scale(.5);
+	}	
 }
